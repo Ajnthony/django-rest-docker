@@ -15,7 +15,8 @@ class UserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
         # create, save and return a new user
 
-        # ** seems to be equal to ... operator in JS/TS, like function (...args) {}
+        # ** seems to be equal to ... operator in JS/TS,
+        #   like function (...args) {}
         if not email:
             raise ValueError('Email is required')
         user = self.model(email=self.normalize_email(email), **extra_fields)
