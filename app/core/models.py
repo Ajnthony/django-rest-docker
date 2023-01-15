@@ -45,5 +45,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     objects = UserManager()  # assigning the manager
 
-    # override the built-in username field with email (which is originally username)
+    # override the built-in username field with email
+    #   (which is originally username)
     USERNAME_FIELD = 'email'
